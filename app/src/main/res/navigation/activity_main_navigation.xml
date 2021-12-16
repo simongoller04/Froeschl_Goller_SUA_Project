@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main_navigation_bar"
+    app:startDestination="@id/activity_main_navigation_card">
+
+    <fragment
+        android:id="@+id/activity_main_navigation_card"
+        android:name="at.fhooe.mc.froeschl_goller_sua_project.activity_main_navigation_card"
+        android:label="fragment_activity_main_navigation_card"
+        tools:layout="@layout/fragment_activity_main_navigation_card" />
+    <fragment
+        android:id="@+id/activity_main_navigation_workouts"
+        android:name="at.fhooe.mc.froeschl_goller_sua_project.activity_main_navigation_workouts"
+        android:label="fragment_activity_main_navigation_workouts"
+        tools:layout="@layout/fragment_activity_main_navigation_workouts" />
+    <fragment
+        android:id="@+id/activity_main_navigation_stats"
+        android:name="at.fhooe.mc.froeschl_goller_sua_project.activity_main_navigation_stats"
+        android:label="fragment_activity_main_navigation_stats"
+        tools:layout="@layout/fragment_activity_main_navigation_stats" />
+</navigation>

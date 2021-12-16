@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/activity_main_navigation_card"
+        android:title="Card"
+        android:icon="@drawable/navigation_card_icon" />
+
+    <item
+        android:id="@+id/activity_main_navigation_workouts"
+        android:title="Workouts"
+        android:icon="@drawable/navigation_workouts_icon" />
+
+    <item
+        android:id="@+id/activity_main_navigation_stats"
+        android:title="Stats"
+        android:icon="@drawable/navigation_stats_icon" />
+</menu>
