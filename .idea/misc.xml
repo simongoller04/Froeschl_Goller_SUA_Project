@@ -9,6 +9,15 @@
         <entry key="..\:/Users/Simon Goller/androidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/layout/fragment_activity_main_navigation_workouts.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Simon Goller/androidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/layout/fragment_activity_main_navigation_workouts_list.xml" value="0.33" />
         <entry key="..\:/Users/Simon Goller/androidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.33" />
+        <entry key="..\:/Users/simon/anrdoidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/drawable/rounded_corner_rectangle.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/simon/anrdoidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/drawable/three_dot_icon.xml" value="0.2916666666666667" />
+        <entry key="..\:/Users/simon/anrdoidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/layout/exercise_list_item.xml" value="0.375" />
+        <entry key="..\:/Users/simon/anrdoidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/layout/fragment_activity_main_navigation_workouts.xml" value="0.25" />
+        <entry key="..\:/Users/simon/anrdoidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/layout/fragment_workout_exercise_overview.xml" value="0.25" />
+        <entry key="..\:/Users/simon/anrdoidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/layout/fragment_workouts_add_new_popup.xml" value="0.335" />
+        <entry key="..\:/Users/simon/anrdoidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/layout/workouts_add_new_popup.xml" value="0.2128623188405797" />
+        <entry key="..\:/Users/simon/anrdoidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/layout/workouts_list_element.xml" value="0.335" />
+        <entry key="..\:/Users/simon/anrdoidStudioProjects/Froeschl_Goller_SUA_Project/app/src/main/res/layout/workouts_list_item.xml" value="0.25" />
       </map>
     </option>
   </component>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/popup_window_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--tools:context=".PopUpWindow"> </!-->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/popup_window_view"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="2dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp"
+        app:cardPreventCornerOverlap="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/popup_window_background_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="#DFDFDF"
+            android:minHeight="170dp">
+
+            <Button
+                android:id="@+id/popup_workout_color_yellow"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:backgroundTint="#FFA800"
+                app:layout_constraintBottom_toTopOf="@+id/popup_workout_cancel_button"
+                app:layout_constraintEnd_toStartOf="@+id/popup_workout_color_red"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/popup_workout_color_red"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:backgroundTint="#EA0000"
+                app:layout_constraintBottom_toTopOf="@+id/popup_workout_cancel_button"
+                app:layout_constraintEnd_toStartOf="@+id/popup_workout_color_brown"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/popup_workout_color_yellow" />
+
+            <Button
+                android:id="@+id/popup_workout_color_brown"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:backgroundTint="#BF9A6F"
+                app:layout_constraintBottom_toTopOf="@+id/popup_workout_add_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/popup_workout_color_red" />
+
+            <Button
+                android:id="@+id/popup_workout_color_grey"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:backgroundTint="#C4C4C4"
+                app:layout_constraintBottom_toTopOf="@+id/popup_workout_color_yellow"
+                app:layout_constraintEnd_toStartOf="@+id/popup_workout_color_purple"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/popup_workout_name" />
+
+            <Button
+                android:id="@+id/popup_workout_color_purple"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:backgroundTint="#A781C5"
+                app:layout_constraintBottom_toTopOf="@+id/popup_workout_color_red"
+                app:layout_constraintEnd_toStartOf="@+id/popup_workout_color_green"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/popup_workout_color_grey"
+                app:layout_constraintTop_toBottomOf="@+id/popup_workout_name" />
+
+            <Button
+                android:id="@+id/popup_workout_color_green"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:backgroundTint="#27A451"
+                app:layout_constraintBottom_toTopOf="@+id/popup_workout_color_brown"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/popup_workout_color_purple"
+                app:layout_constraintTop_toBottomOf="@+id/popup_workout_name" />
+
+            <EditText
+                android:id="@+id/popup_workout_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/popup_workout_cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#019EE3"
+                android:text="cancel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/popup_workout_add_button"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/popup_workout_add_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#019EE3"
+                android:text="add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/popup_workout_cancel_button" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
