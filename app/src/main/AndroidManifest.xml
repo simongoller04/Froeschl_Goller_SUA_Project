@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Froeschl_Goller_SUA_Project">
         <activity
+            android:name=".workout_overview"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

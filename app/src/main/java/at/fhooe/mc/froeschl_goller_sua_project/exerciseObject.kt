@@ -8,6 +8,7 @@ object exerciseObject {
     private var mReps: Int = 0
     private var mSets: Int = 0
     private var mWeight: Int = 0
+    private var mMuscleGroup: String = ""
 
     // stores the provided data
     fun init(name: String, reps: Int, sets: Int, weight: Int) {

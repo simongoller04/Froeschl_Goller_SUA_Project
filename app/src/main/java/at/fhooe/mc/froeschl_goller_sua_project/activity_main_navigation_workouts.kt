@@ -50,7 +50,7 @@ class activity_main_navigation_workouts : Fragment() {
 
         val context = context as MainActivity
 
-        val addNewWorkoutButton = context.findViewById(R.id.workout_overview_addnew_button) as Button
+        val addNewWorkoutButton = context.findViewById(R.id.workout_exercise_overview_addnew_button) as Button
 
         // open popup screen to add new workout
         addNewWorkoutButton.setOnClickListener {
@@ -65,7 +65,7 @@ class activity_main_navigation_workouts : Fragment() {
             workoutsList("Leg Day", R.drawable.navigation_workouts_icon, "#A781C5"),
             )
 
-        val recyclerView = context.findViewById(R.id.workout_overview_list_view) as RecyclerView
+        val recyclerView = context.findViewById(R.id.workout_exercise_overview_list_view) as RecyclerView
         recyclerView.adapter = workoutsListAdapter(data)
         recyclerView.layoutManager = LinearLayoutManager(context)
     }
