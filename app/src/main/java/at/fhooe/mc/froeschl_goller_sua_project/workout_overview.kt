@@ -1,5 +1,6 @@
 package at.fhooe.mc.froeschl_goller_sua_project
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -13,7 +14,9 @@ class workout_overview : AppCompatActivity() {
 
         // add new Exercise Button pressed
         mAddExerciseButton.setOnClickListener {
-            setContentView(R.layout.all_exercise_overview)
+            Intent(this, all_exercise_overview::class.java).also {
+                startActivity(it);
+            }
         }
     }
 }
