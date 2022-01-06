@@ -1,4 +1,4 @@
-package at.fhooe.mc.froeschl_goller_sua_project
+package at.fhooe.mc.froeschl_goller_sua_project.exercise
 
 /**
  * Contains all the variables and methods to

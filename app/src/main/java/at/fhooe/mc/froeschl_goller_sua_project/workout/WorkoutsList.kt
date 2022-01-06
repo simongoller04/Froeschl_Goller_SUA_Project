@@ -1,4 +1,4 @@
-package at.fhooe.mc.froeschl_goller_sua_project
+package at.fhooe.mc.froeschl_goller_sua_project.workout
 
 /**
  * data Class for the Workouts List

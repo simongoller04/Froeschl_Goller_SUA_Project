@@ -1,11 +1,9 @@
-package at.fhooe.mc.froeschl_goller_sua_project
+package at.fhooe.mc.froeschl_goller_sua_project.exercise
 
-import android.graphics.Color
-import android.graphics.Color.GREEN
-import android.graphics.Color.WHITE
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import at.fhooe.mc.froeschl_goller_sua_project.R
 
 class all_exercise_ListAdapter (val mData: List<exerciseDataClass>): RecyclerView.Adapter<all_exercise_ListViewHolder>() {
 

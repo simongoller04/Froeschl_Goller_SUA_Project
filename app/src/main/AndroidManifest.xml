@@ -9,9 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Froeschl_Goller_SUA_Project">
-        <activity android:name=".all_exercise_overview" />
+        <activity android:name=".exercise.all_exercise_overview" />
         <activity
-            android:name=".workout_overview"
+            android:name=".ui.workout_overview"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

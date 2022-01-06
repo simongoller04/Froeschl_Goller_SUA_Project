@@ -6,8 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import at.fhooe.mc.froeschl_goller_sua_project.data.db.entities.workoutDataClass
+import at.fhooe.mc.froeschl_goller_sua_project.data.db.workoutDatabase
+import at.fhooe.mc.froeschl_goller_sua_project.data.repositories.workoutRepository
+import at.fhooe.mc.froeschl_goller_sua_project.ui.workoutViewModel
+import at.fhooe.mc.froeschl_goller_sua_project.ui.workoutViewModelFactory
+import at.fhooe.mc.froeschl_goller_sua_project.workout.workoutDataListener
+import at.fhooe.mc.froeschl_goller_sua_project.workout.workoutsListAdapter
+import at.fhooe.mc.froeschl_goller_sua_project.workout.workouts_add_new_popup
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,6 +41,8 @@ class activity_main_navigation_workouts : Fragment() {
             param2 = it.getString(ARG_PARAM2)
         }
 
+
+
     }
 
     override fun onCreateView(
@@ -52,22 +64,42 @@ class activity_main_navigation_workouts : Fragment() {
 
         val addNewWorkoutButton = context.findViewById(R.id.workout_exercise_overview_addnew_button) as Button
 
+        val database = workoutDatabase(context)
+        val repository = workoutRepository(database)
+        val factory = workoutViewModelFactory(repository)
+
+        val viewModel = ViewModelProviders.of(this, factory).get(workoutViewModel::class.java)
+
+        val adapter = workoutsListAdapter(listOf(), viewModel)
+
+        val recyclerView = context.findViewById(R.id.workout_exercise_overview_list_view) as RecyclerView
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(context)
+
+        viewModel.getAllWorkouts().observe(viewLifecycleOwner, Observer {
+            adapter.items = it
+            adapter.notifyDataSetChanged()
+        })
+
         // open popup screen to add new workout
         addNewWorkoutButton.setOnClickListener {
-            var dialog = workouts_add_new_popup()
+            var dialog = workouts_add_new_popup(object : workoutDataListener {
+                override fun onAddButtonClicker(item: workoutDataClass) {
+                    viewModel.upsert(item)
+                }
+            })
             dialog.show(parentFragmentManager, "Add New Workout")
         }
 
+
+
         // val data = get the list from gson
 
-        val data = mutableListOf(
-            workoutsList("Chest Day", R.drawable.navigation_workouts_icon, "#FFA800"),
-            workoutsList("Leg Day", R.drawable.navigation_workouts_icon, "#A781C5"),
-            )
+//        val data = List<workoutDataClass>(
+//            workoutsList("Chest Day", R.drawable.navigation_workouts_icon, "#FFA800"),
+//            workoutsList("Leg Day", R.drawable.navigation_workouts_icon, "#A781C5"),
+//            )
 
-        val recyclerView = context.findViewById(R.id.workout_exercise_overview_list_view) as RecyclerView
-        recyclerView.adapter = workoutsListAdapter(data)
-        recyclerView.layoutManager = LinearLayoutManager(context)
     }
 
     companion object {
@@ -89,6 +121,12 @@ class activity_main_navigation_workouts : Fragment() {
                 }
             }
     }
+
+
+
+
+
+
 //    private fun getUsers(): workoutObject {
 //        val preferences = PreferenceManager.getDefaultSharedPreferences(context)
 //        val jsonString = preferences.getString("users", null)
