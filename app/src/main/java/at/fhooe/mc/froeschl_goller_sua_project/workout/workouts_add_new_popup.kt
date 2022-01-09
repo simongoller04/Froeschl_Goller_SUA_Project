@@ -10,7 +10,7 @@ import android.widget.*
 import androidx.fragment.app.DialogFragment
 import at.fhooe.mc.froeschl_goller_sua_project.R
 import at.fhooe.mc.froeschl_goller_sua_project.data.db.entities.workoutDataClass
-
+import at.fhooe.mc.froeschl_goller_sua_project.exercise.exerciseDataClass
 
 
 /**
@@ -68,6 +68,7 @@ class workouts_add_new_popup(var workoutDataListener: workoutDataListener) : Dia
         addButton.setOnClickListener {
             val inputText = rootView.findViewById(R.id.popup_workout_name) as EditText
             val mName = inputText.text.toString().trim()
+            var exerciseList: List<exerciseDataClass> = emptyList()
 
             // no name was entered
             if (mName.isNullOrEmpty()) {
@@ -78,7 +79,7 @@ class workouts_add_new_popup(var workoutDataListener: workoutDataListener) : Dia
 
             // store the data
             else {
-                val item = workoutDataClass(mName, mHexCode)
+                val item = workoutDataClass(mName, mHexCode, exerciseList)
                 workoutDataListener.onAddButtonClicker(item)
                 dismiss()
 

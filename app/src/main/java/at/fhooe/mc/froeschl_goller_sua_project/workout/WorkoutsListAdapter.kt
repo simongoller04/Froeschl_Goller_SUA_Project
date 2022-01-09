@@ -3,8 +3,11 @@ package at.fhooe.mc.froeschl_goller_sua_project.workout
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.findFragment
 import androidx.recyclerview.widget.RecyclerView
 import at.fhooe.mc.froeschl_goller_sua_project.R
+import at.fhooe.mc.froeschl_goller_sua_project.activity_main_navigation_workouts
 import at.fhooe.mc.froeschl_goller_sua_project.data.db.entities.workoutDataClass
 import at.fhooe.mc.froeschl_goller_sua_project.ui.workoutViewModel
 
@@ -27,7 +30,7 @@ class workoutsListAdapter(
         holder.mWorkoutIcon.setImageResource(items[position].mIcon)
 
         holder.mButton.setOnClickListener {
-
+            viewModel.delete(items[position])
         }
     }
 

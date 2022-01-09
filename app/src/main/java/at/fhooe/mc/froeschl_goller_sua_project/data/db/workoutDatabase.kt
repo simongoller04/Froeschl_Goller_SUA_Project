@@ -4,12 +4,15 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
+import at.fhooe.mc.froeschl_goller_sua_project.Converters
 import at.fhooe.mc.froeschl_goller_sua_project.data.db.entities.workoutDataClass
 
 @Database(
     entities = [workoutDataClass::class],
     version = 1
 )
+@TypeConverters(Converters::class)
 abstract class workoutDatabase: RoomDatabase() {
 
     abstract fun getWorkoutDao(): workoutDao
@@ -27,6 +30,7 @@ abstract class workoutDatabase: RoomDatabase() {
 
         private fun createDatabase(context: Context) =
             Room.databaseBuilder(context.applicationContext,
-                workoutDatabase::class.java, "WorkoutDB.db").build()
+                workoutDatabase::class.java, "WorkoutDB.db").addTypeConverter(Converters()).build()
+
     }
 }

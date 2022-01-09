@@ -30,15 +30,6 @@ class workoutsListViewHolder (root: View, private val viewModel: workoutViewMode
         // OnClickListener for the Button on the right
         mButton.setOnClickListener {
 
-
-
-            var dialog = workouts_add_new_popup(object : workoutDataListener {
-                override fun onAddButtonClicker(item: workoutDataClass) {
-                    viewModel.update(item)
-                }
-            })
-            dialog.show(root.findFragment<activity_main_navigation_workouts>().parentFragmentManager, "Besser ises")
-
         }
     }
 }
