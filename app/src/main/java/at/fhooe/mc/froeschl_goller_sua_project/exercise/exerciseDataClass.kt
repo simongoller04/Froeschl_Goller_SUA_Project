@@ -5,9 +5,9 @@ package at.fhooe.mc.froeschl_goller_sua_project.exercise
  * create and work with an exercise object
  */
 data class exerciseDataClass(val mName: String,
-                             var mReps: Int,
-                             var mSets: Int,
-                             var mWeight: Int,
+                             val mReps: Int,
+                             val mSets: Int,
+                             val mWeight: Int,
                              val mMuscleGroup: String) {
 
     // returns the name of the exercise

@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <View
-            android:id="@+id/workouts_list_item_rectangle"
+            android:id="@+id/exercise_list_item_rectangle"
             android:layout_width="0dp"
             android:layout_height="110dp"
 
@@ -28,16 +28,16 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/workouts_list_item_icon"
+            android:id="@+id/exercise_list_item_icon"
             android:layout_width="54dp"
             android:layout_height="55dp"
             android:src="@drawable/p_icon"
-            app:layout_constraintBottom_toBottomOf="@+id/workouts_list_item_rectangle"
-            app:layout_constraintStart_toStartOf="@+id/workouts_list_item_rectangle"
-            app:layout_constraintTop_toTopOf="@+id/workouts_list_item_rectangle" />
+            app:layout_constraintBottom_toBottomOf="@+id/exercise_list_item_rectangle"
+            app:layout_constraintStart_toStartOf="@+id/exercise_list_item_rectangle"
+            app:layout_constraintTop_toTopOf="@+id/exercise_list_item_rectangle" />
 
         <TextView
-            android:id="@+id/workouts_list_item_text"
+            android:id="@+id/exercise_list_item_text"
             android:layout_width="138dp"
             android:layout_height="29dp"
             android:text="Benchpress"
@@ -46,56 +46,56 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/guideline2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/workouts_list_item_rectangle"
-            app:layout_constraintTop_toTopOf="@+id/workouts_list_item_rectangle" />
+            app:layout_constraintStart_toStartOf="@+id/exercise_list_item_rectangle"
+            app:layout_constraintTop_toTopOf="@+id/exercise_list_item_rectangle" />
 
         <ImageButton
-            android:id="@+id/workouts_list_item_button"
+            android:id="@+id/exercise_list_item_button"
             android:layout_width="61dp"
             android:layout_height="59dp"
             android:backgroundTint="#FFC107"
             android:src="@drawable/three_dot_icon"
-            app:layout_constraintBottom_toBottomOf="@+id/workouts_list_item_rectangle"
-            app:layout_constraintEnd_toEndOf="@+id/workouts_list_item_rectangle"
-            app:layout_constraintTop_toTopOf="@+id/workouts_list_item_rectangle" />
+            app:layout_constraintBottom_toBottomOf="@+id/exercise_list_item_rectangle"
+            app:layout_constraintEnd_toEndOf="@+id/exercise_list_item_rectangle"
+            app:layout_constraintTop_toTopOf="@+id/exercise_list_item_rectangle" />
 
         <TextView
-            android:id="@+id/workout_exercise_overview_weight"
+            android:id="@+id/exercise_list_item_weight"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="60kg"
             android:textSize="20dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/workouts_list_item_rectangle"
-            app:layout_constraintEnd_toStartOf="@+id/workout_exercise_overview_reps"
+            app:layout_constraintBottom_toBottomOf="@+id/exercise_list_item_rectangle"
+            app:layout_constraintEnd_toStartOf="@+id/exercise_list_item_reps"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/workouts_list_item_icon"
+            app:layout_constraintStart_toEndOf="@+id/exercise_list_item_icon"
             app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
         <TextView
-            android:id="@+id/workout_exercise_overview_sets"
+            android:id="@+id/exercise_list_item_sets"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="4 Sets"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/workouts_list_item_rectangle"
-            app:layout_constraintEnd_toStartOf="@+id/workouts_list_item_button"
+            app:layout_constraintBottom_toBottomOf="@+id/exercise_list_item_rectangle"
+            app:layout_constraintEnd_toStartOf="@+id/exercise_list_item_button"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/workout_exercise_overview_reps"
+            app:layout_constraintStart_toEndOf="@+id/exercise_list_item_reps"
             app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
         <TextView
-            android:id="@+id/workout_exercise_overview_reps"
+            android:id="@+id/exercise_list_item_reps"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="8 Reps"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/workouts_list_item_rectangle"
-            app:layout_constraintEnd_toStartOf="@+id/workout_exercise_overview_sets"
+            app:layout_constraintBottom_toBottomOf="@+id/exercise_list_item_rectangle"
+            app:layout_constraintEnd_toStartOf="@+id/exercise_list_item_sets"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/workout_exercise_overview_weight"
+            app:layout_constraintStart_toEndOf="@+id/exercise_list_item_weight"
             app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
         <androidx.constraintlayout.widget.Guideline

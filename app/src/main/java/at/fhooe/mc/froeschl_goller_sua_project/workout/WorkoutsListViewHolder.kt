@@ -26,10 +26,5 @@ class workoutsListViewHolder (root: View, private val viewModel: workoutViewMode
 
             root.context.startActivity(Intent(root.context, workout_overview::class.java))
         }
-
-        // OnClickListener for the Button on the right
-        mButton.setOnClickListener {
-
-        }
     }
 }

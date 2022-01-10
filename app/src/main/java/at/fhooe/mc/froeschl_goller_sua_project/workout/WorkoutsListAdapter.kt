@@ -11,6 +11,7 @@ import at.fhooe.mc.froeschl_goller_sua_project.activity_main_navigation_workouts
 import at.fhooe.mc.froeschl_goller_sua_project.data.db.entities.workoutDataClass
 import at.fhooe.mc.froeschl_goller_sua_project.ui.workoutViewModel
 
+
 class workoutsListAdapter(
     var items: List<workoutDataClass>,
     private val viewModel: workoutViewModel
@@ -29,9 +30,19 @@ class workoutsListAdapter(
         holder.mWorkoutName.text = items[position].mName
         holder.mWorkoutIcon.setImageResource(items[position].mIcon)
 
+        holder.mRectangle.setOnClickListener {
+            items[position].mExerciseList
+        }
+
+
+
         holder.mButton.setOnClickListener {
             viewModel.delete(items[position])
         }
+
+
+
+
     }
 
     override fun getItemCount(): Int {
