@@ -9,9 +9,9 @@ import androidx.recyclerview.widget.RecyclerView
 import at.fhooe.mc.froeschl_goller_sua_project.R
 import at.fhooe.mc.froeschl_goller_sua_project.exercise.all_exercise_ListAdapter
 import at.fhooe.mc.froeschl_goller_sua_project.exercise.all_exercise_overview
-import at.fhooe.mc.froeschl_goller_sua_project.workout.workoutsListAdapter
+import at.fhooe.mc.froeschl_goller_sua_project.exercise.exerciseDataClass
 
-class workout_overview(private val viewModel: workoutViewModel) : AppCompatActivity() {
+class workout_overview : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_workout_overview)
@@ -19,16 +19,17 @@ class workout_overview(private val viewModel: workoutViewModel) : AppCompatActiv
         val mAddExerciseButton: Button = findViewById(R.id.workout_exercise_overview_addnew_button)
 
 
+        val recyclerView: RecyclerView = findViewById(R.id.workout_exercise_overview_list_view)
 
-        val adapter = workoutsListAdapter(listOf(), viewModel)
-        adapter.items[1].mExerciseList
+        val data: List<exerciseDataClass>  = listOf(
+            exerciseDataClass("Benchpress", 6, 3,100, "Chest"),
+            exerciseDataClass("Overheadpress", 6, 4,28, "Shoulder"),
+        )
 
 
-        val recyclerView = findViewById(R.id.workout_exercise_overview_list_view) as RecyclerView
-
+        val adapter = all_exercise_ListAdapter(data)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
-
 
 
         // add new Exercise Button pressed

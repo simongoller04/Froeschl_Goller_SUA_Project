@@ -30,12 +30,6 @@ class workoutsListAdapter(
         holder.mWorkoutName.text = items[position].mName
         holder.mWorkoutIcon.setImageResource(items[position].mIcon)
 
-        holder.mRectangle.setOnClickListener {
-            items[position].mExerciseList
-        }
-
-
-
         holder.mButton.setOnClickListener {
             viewModel.delete(items[position])
         }

@@ -10,7 +10,7 @@ class all_exercise_ListAdapter (val mData: List<exerciseDataClass>): RecyclerVie
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): all_exercise_ListViewHolder {
         LayoutInflater.from(parent.context).apply {
-            val root = inflate(R.layout.exercise_list_item_small, null)
+            val root = inflate(R.layout.exercise_list_item, null)
             return all_exercise_ListViewHolder(root)
         }
     }
@@ -18,8 +18,11 @@ class all_exercise_ListAdapter (val mData: List<exerciseDataClass>): RecyclerVie
     override fun onBindViewHolder(holder: all_exercise_ListViewHolder, position: Int) {
 
         holder.mRectangle.background.setTint(Color.parseColor("#CFCFCF"))
+        holder.mSets.text =mData[position].mSets.toString() + " Sets"
+        holder.mWeight.text =mData[position].mWeight.toString() + "kg"
+        holder.mReps.text = mData[position].mReps.toString() + " Reps"
         holder.mExerciseName.text = mData[position].mName
-
+        holder.mButton.background.setTint(Color.parseColor("#CFCFCF"))
 
     }
 

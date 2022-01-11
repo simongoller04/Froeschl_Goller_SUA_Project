@@ -9,12 +9,16 @@ import at.fhooe.mc.froeschl_goller_sua_project.R
 
 class all_exercise_ListViewHolder (root: View): RecyclerView.ViewHolder(root) {
 
-    val mExerciseName: TextView = root.findViewById(R.id.exercise_list_item_text_small)
-    val mRectangle: View = root.findViewById(R.id.exercise_list_item_rectangle_small)
+    val mExerciseName: TextView = root.findViewById(R.id.exercise_list_item_text)
+    val mRectangle: View = root.findViewById(R.id.exercise_list_item_rectangle)
+    val mReps: TextView = root.findViewById(R.id.exercise_list_item_reps)
+    val mWeight: TextView = root.findViewById(R.id.exercise_list_item_weight)
+    val mSets: TextView = root.findViewById(R.id.exercise_list_item_sets)
+    val mButton: ImageButton = root.findViewById(R.id.exercise_list_item_button)
+
 
     init {
         root.setOnClickListener{
-
 
         }
     }
